@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js" defer></script>
+</head>
+
+<body>
+    <div class="main-block">
+
+        <div class="calculator calculator--conversion">
+            <h2 class="calculator__title">Conversion</h2>
+
+            <form class="calculator__form" onsubmit="calculateConversionValues(event)">
+                <div class="calculator__input-wrapper">
+                    <label class="calculator__label" for="impression">Impression</label>
+                    <input class="calculator__input" type="number" id="impression-input" name="impression" />
+                </div>
+
+                <div class="calculator__input-wrapper">
+                    <label class="calculator__label" for="ctr">CTR in %</label>
+                    <input class="calculator__input" type="number" id="ctr-input" name="ctr" />
+                </div>
+
+                <div class="calculator__input-wrapper">
+                    <label class="calculator__label calculator__label--bold" for="visit">Visit</label>
+                    <input class="calculator__input" type="text" id="visit-input" name="visit" disabled />
+                </div>
+
+                <div class="calculator__input-wrapper">
+                    <label class="calculator__label" for="visit-to-lead">Visit to leads in %</label>
+                    <input class="calculator__input" type="number" id="visit-to-lead-input" name="visit-to-lead" />
+                </div>
+
+                <div class="calculator__input-wrapper">
+                    <label class="calculator__label calculator__label--bold" for="leads">Leads</label>
+                    <input class="calculator__input" type="text" id="leads-input" name="leads" disabled />
+                </div>
+
+                <div class="calculator__input-wrapper">
+                    <label class="calculator__label" for="leads-to-customer">Leads to customer %</label>
+                    <input class="calculator__input" type="number" id="leads-to-customer-input" name="leads-to-customer" />
+                </div>
+
+                <div class="calculator__input-wrapper">
+                    <label class="calculator__label calculator__label--bold" for="customer">Customer</label>
+                    <input class="calculator__input" type="text" id="customer-input" name="customer" disabled />
+                </div>
+
+                <input class="calculator__submit" type="submit" value="Calculate">
+            </form>
+        </div>
+
+        <div class="calculator calculator--cost">
+            <h2 class="calculator__title">Cost</h2>
+
+            <form class="calculator__form" onsubmit="calculateCostValues(event)">
+
+                <div class="calculator__input-wrapper">
+                    <label class="calculator__label" for="total-cost">Total Cost</label>
+                    <input class="calculator__input" type="number" id="total-cost-input" name="total-cost"/>
+                </div>
+
+                <div class="calculator__input-wrapper">
+                    <label class="calculator__label" for="cpm">CPM</label>
+                    <input class="calculator__input" type="text" id="cpm-input" name="cpm" disabled/>
+                </div>
+
+                <div class="calculator__input-wrapper">
+                    <label class="calculator__label" for="cpc">CPC</label>
+                    <input class="calculator__input" type="text" id="cpc-input" name="cpc" disabled/>
+                </div>
+
+                <div class="calculator__input-wrapper">
+                    <label class="calculator__label" for="cost-per-lead">Cost per lead</label>
+                    <input class="calculator__input" type="text" id="cost-per-lead-input" name="cost-per-lead" disabled />
+                </div>
+
+                <div class="calculator__input-wrapper">
+                    <label class="calculator__label" for="cost-per-customer">Cost per customer</label>
+                    <input class="calculator__input" type="text" id="cost-per-customer-input" name="cost-per-customer" disabled />
+                </div>
+
+                <input class="calculator__submit" type="submit" value="Calculate">
+            </form>
+        </div>
+
+        <div class="calculator calculator--revenue">
+            <h2 class="calculator__title">Revenue</h2>
+        
+            <form class="calculator__form" onsubmit="calculateRevenueValues(event)">
+        
+                <div class="calculator__input-wrapper">
+                    <label class="calculator__label" for="revenue">Revenue</label>
+                    <input class="calculator__input" type="number" id="revenue-input" name="revenue" />
+                </div>
+        
+                <div class="calculator__input-wrapper">
+                    <label class="calculator__label" for="roi">ROI in %</label>
+                    <input class="calculator__input" type="text" id="roi-input" name="roi" disabled />
+                </div>
+        
+                <div class="calculator__input-wrapper">
+                    <label class="calculator__label" for="revenue-per-click">Revenue Per Click</label>
+                    <input class="calculator__input" type="text" id="revenue-per-click-input" name="revenue-per-click" disabled />
+                </div>
+        
+                <div class="calculator__input-wrapper">
+                    <label class="calculator__label" for="revenue-per-lead">Revenue Per Lead</label>
+                    <input class="calculator__input" type="text" id="revenue-per-lead-input" name="revenue-per-lead" disabled />
+                </div>
+        
+                <div class="calculator__input-wrapper">
+                    <label class="calculator__label" for="revenue-per-customer">Revenue Per Customer</label>
+                    <input class="calculator__input" type="text" id="revenue-per-customer-input" name="revenue-per-customer" disabled />
+                </div>
+        
+                <input class="calculator__submit" type="submit" value="Calculate">
+            </form>
+        </div>
+        
+
+                <div class="calculator__input-wrapper

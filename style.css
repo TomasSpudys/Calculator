@@ -1,0 +1,67 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.calculator__title {
+    letter-spacing: 1px;
+}
+
+.calculator__input-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 15px;
+    max-width: 320px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 30px;
+}
+
+.calculator__input {
+    border-radius: 8px;
+}
+
+.calculator--conversion,
+.calculator--cost,
+.calculator--revenue {
+    background: #f9f9f9;
+    border-radius: 24px;
+    padding: 24px;
+    margin-bottom: 20px;
+}
+
+.calculator__submit {
+    display: inline-block;
+    padding: 15px 30px;
+    margin: 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.calculator__submit:hover {
+    background-color: #333;
+}
+
+.main-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 80px;
+}
+
+/* Remove arrows from number input in WebKit browsers */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Remove arrows from number input in Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
